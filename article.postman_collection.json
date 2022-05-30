@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "abdd6c48-2d95-40c6-8c7c-26a51d14dc34",
+		"name": "article",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10500932"
+	},
+	"item": [
+		{
+			"name": "取得全部貼文",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/posts",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "新增貼文",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"新增貼文3\",\r\n    \"image\": \"https://picsum.photos/id/1003/1181/1772\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/post",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"post"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"test5\",\r\n    \"email\":\"test5@test.com\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/sign_up",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登入",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"test5@test.com\",\r\n    \"password\":\"123456789\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/sign_in",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得所有使用者",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/users",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "取得目前使用者資料",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/user",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯使用者",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"test33\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/user/:id/edit",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						":id",
+						"edit"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "編輯使用者密碼",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"password\": \"1234567890\",\r\n    \"confirmPassword\":\"1234567890\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/user/:id/updatePassword",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"user",
+						":id",
+						"updatePassword"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "image",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyOTQzZTg3ZTE0OTdjZDYwYzkxMzdlZiIsImlhdCI6MTY1Mzg4OTYwNSwiZXhwIjoxNjU0NDk0NDA1fQ.RJVT_ODBtVKccxnJS1GS-13Z4-u_xVVYhRK3lV20Ktk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/D:/六角學院/metawall/img/user2.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://nameless-badlands-14639.herokuapp.com/upload",
+					"protocol": "https",
+					"host": [
+						"nameless-badlands-14639",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
